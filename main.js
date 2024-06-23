@@ -3,64 +3,89 @@ const DefaultSetter = () => {
   gsap.set("#nav nav .logo", { y: -100 });
   gsap.set("#nav nav .toggle-btn", { y: -100 });
 };
+
 function PreLoader() {
   const PreLoaderConatiner = document.querySelector("#preLoader");
   const LoaderContent = document.querySelector(".l-loader");
   const bacgroundLoaderScreen = document.querySelector(".l-red-backgrond");
-  //   const textContent = document.querySelectorAll(".l-text-content");
-  const textContentHeadingTop = gsap.utils.toArray(".l-text-content.top h1");
-  const textContentHeadingBottom = gsap.utils.toArray(
-    ".l-text-content.bottom h1"
+  const whiteheading = document.querySelectorAll(
+    "#preLoader .l-loader h1.l-h-white"
   );
-  const textContentContainer = document.querySelectorAll(".l-text-content");
-  const lines = document.querySelectorAll(".l-line");
-  const tl = gsap.timeline();
-  tl.from(lines, {
-    width: 0,
-    stagger: 0.3,
-    duration: 1,
-  }).fromTo(
-    textContentContainer,
-    { height: "0px", duration: 1, ease: "power4.out" },
+  const tl = gsap.timeline({ paused: false });
+
+  tl.to(
+    "#preLoader .l-loader #l-h-1",
     {
-      height: "150px",
-      duration: 1,
-    }
-  );
-  const headings = [
-    { id: 1, startY: 0, endY: -100 },
-    { id: 2, startY: -100, endY: -200 },
-    { id: 3, startY: -200, endY: -300 },
-    { id: 4, startY: -300, endY: -300 }, // Adjusted to match your last sequence
-  ];
+      delay: 0.3,
+      display: "block",
+    },
+    ".."
+  )
+    .to(
+      "#l-img",
+      {
+        y: "0",
+        opacity: 1,
+      },
+      ".."
+    )
+    .to("#preLoader .l-loader #l-h-2", {
+      display: "block",
+    })
+    .to(
+      "#preLoader .l-loader #l-h-1",
+      {
+        display: "none",
+      },
+      "."
+    )
+    .to(
+      "#preLoader .l-loader #l-h-2",
+      {
+        display: "none",
+      },
+      "."
+    );
 
-  // Iterate over each heading data
-  headings.forEach(({ id, startY, endY }) => {
-    // Define labels based on the current heading id
-    const label = `h${id}`;
-    const fadeLabel = `h${id}-fade`;
-
-    // Animation for top and bottom elements of current heading
-    tl.to(`#l-t-${id}`, { y: `${startY}%`, duration: 0.5 }, label)
-      .to(`#l-b-${id}`, { y: `${startY}%`, duration: 0.5 }, label)
-      .to(`#l-t-${id}`, { y: `${endY}%`, duration: 0.5 }, fadeLabel)
-      .to(`#l-b-${id}`, { y: `${endY}%`, duration: 0.5 }, fadeLabel);
-  });
-
-  // tl.to(textContentContainer, {
-  //   height: "0px",
-  //   delay: 0.3,
-  //   duration: 1,
-  //   ease: "power4.out",
-  // })
-  //   .to(lines, {
-  //     width: 0,
-  //     stagger: 0.3,
-  //     duration: 1,
-  //   })
   tl.to(
     LoaderContent,
     {
+      backgroundColor: "red",
+    },
+    "c"
+  );
+  whiteheading.forEach((ele) => {
+    tl.to(ele, {
+      display: "block",
+      duration: 0.2,
+    });
+  });
+
+  whiteheading.forEach((ele, i) => {
+    console.log(whiteheading.length - i - 1);
+    tl.to(whiteheading[whiteheading.length - i - 1], {
+      display: "none",
+      duration: 0.2,
+    });
+  });
+
+  tl.to(LoaderContent, {
+    backgroundColor: "#000",
+  });
+  tl.to("#preLoader .l-loader #l-h-7", {
+    display: "block",
+  }).to(
+    "#l-img",
+    {
+      y: "100%",
+      opacity: 0,
+    },
+    "a"
+  );
+  tl.to(
+    LoaderContent,
+    {
+      delay: 0.2,
       y: "-100%",
       duration: 1,
       ease: "power4.out",
@@ -70,7 +95,7 @@ function PreLoader() {
     .to(
       bacgroundLoaderScreen,
       {
-        delay: 0.1,
+        delay: 0.2,
         y: "-100%",
         duration: 1,
         ease: "power4.out",
@@ -92,7 +117,6 @@ function PreLoader() {
     )
     .add(() => {
       locoScroll.init();
-      console.log(locoScroll);
     });
 }
 
@@ -101,6 +125,7 @@ window.onload = () => {
 };
 
 DefaultSetter();
+
 //Navbar Animation
 function NavbarAnimation() {
   const tl = gsap.timeline();

@@ -1,174 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOAT</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./Css/Nav.css" />
+    <link rel="stylesheet" href="./Css/Preloader.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BOAT</title>
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="./Css/Nav.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css" />
-</head>
-
-<body data-barba="wrapper">
-
-  <div data-barba="container" data-barba-namespace="about">
-    <div class="cover">
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
-  </div>
-  <!-- =============== PRE_LOADER ========================= -->
-  <div id="preLoader">
-    <div class="l-loader">
-      <div class="l-logo">
-        <img src="./Images/SVG/PreLoaders/Boat Logo.svg" alt="logo" />
-      </div>
-      <div class="l-content">
-        <div class="l-line"></div>
-        <div class="l-text-content top">
-          <h1 id="l-t-1">HOLD</h1>
-          <h1 id="l-t-2">YOUR</h1>
-          <h1 id="l-t-3">AUDIO</h1>
-          <h1 id="l-t-4">IS</h1>
-        </div>
-        <div class="l-line"></div>
-        <div class="l-text-content bottom">
-          <h1 id="l-b-1"">TIGHT <span>...</span></h1>
-          <h1 id="l-b-2"">ULTIMATE</h1>
-          <h1 id="l-b-3"">JOURNEY</h1>
-          <h1 id="l-b-4"">READY</h1>
-        </div>
-        <div class="l-line"></div>
-      </div>
-      <div class="l-progress">
-        <img src="./Images/SVG/PreLoaders/Bouncing ball.gif" alt="circularprogress" />
+  <body data-barba="wrapper">
+    <div data-barba="container" data-barba-namespace="about">
+      <div class="cover">
+        <span></span><span></span><span></span><span></span><span></span>
       </div>
     </div>
-    <div class="l-red-backgrond"></div>
-  </div>
-  <!-- =============== PRE_LOADER END ========================= -->
+    <!-- =============== PRE_LOADER ========================= -->
+    <div id="preLoader">
+      <div class="l-loader">
+        <h1 id="l-h-1" class="l-h-red">HOLD</h1>
+        <h1 id="l-h-2" class="l-h-red">THIGHT ...</h1>
+        <h1 id="l-h-3" class="l-h-white">YOUR</h1>
+        <h1 id="l-h-4" class="l-h-white">ULTIMATE</h1>
+        <h1 id="l-h-5" class="l-h-white">AUDIO</h1>
+        <h1 id="l-h-6" class="l-h-white">JOURNEY</h1>
+        <h1 id="l-h-7" class="l-h-red">BEGINS</h1>
+        <img id="l-img" src="./Images/Aman Gupta.png" alt="founder" />
+      </div>
+      <div class="l-red-backgrond"></div>
+    </div>
+    <!-- =============== PRE_LOADER END ========================= -->
 
-  <div id="main">
-    <div id="js-scroll">
-      <!-- =============== NAV BAR ========================= -->
-      <div id="nav">
-        <nav>
-          <div class="info">
-            <p>Boat LifeStyle</p>
-          </div>
+    <div id="main">
+      <div id="js-scroll">
+        <!-- =============== NAV BAR ========================= -->
+        <div id="nav">
+          <nav>
+            <div class="info">
+              <p>Boat LifeStyle</p>
+            </div>
 
-          <div class="logo">
-            <a href="#"> <img src="./Images/SVG/Logo/Logo.png" alt="" /></a>
-          </div>
+            <div class="logo">
+              <a href="#"> <img src="./Images/SVG/Logo/Logo.png" alt="" /></a>
+            </div>
 
-          <div class="toggle-btn">
-            <button class="burger" onclick="this.classList.toggle('active')"></button>
-          </div>
-        </nav>
+            <div class="toggle-btn">
+              <button
+                class="burger"
+                onclick="this.classList.toggle('active')"
+              ></button>
+            </div>
+          </nav>
 
-        <div class="overlay">
-          <div class="line"></div>
-          <div class="overlay-menu">
-            <div class="menu-items">
-              <p id="active"><a href="#">Home</a></p>
+          <div class="overlay">
+            <div class="line"></div>
+            <div class="overlay-menu">
+              <div class="menu-items">
+                <p id="active"><a href="#">Home</a></p>
+              </div>
+              <div class="menu-items">
+                <p><a href="#">Latest Products</a></p>
+              </div>
+              <div class="menu-items">
+                <p><a href="#">Our Features</a></p>
+              </div>
+              <div class="menu-items">
+                <p><a href="#">Categories</a></p>
+              </div>
+              <div class="menu-items">
+                <p><a href="/contactus.html">Contact Us</a></p>
+              </div>
             </div>
-            <div class="menu-items">
-              <p><a href="#">Latest Products</a></p>
-            </div>
-            <div class="menu-items">
-              <p><a href="#">Our Features</a></p>
-            </div>
-            <div class="menu-items">
-              <p><a href="#">Categories</a></p>
-            </div>
-            <div class="menu-items">
-              <p><a href="/contactus.html">Contact Us</a></p>
-            </div>
-          </div>
 
-          <div class="sub-menu">
-            <p><a href="#">Twitter</a></p>
-            <p>.</p>
-            <p><a href="#">Instagram</a></p>
-            <p>.</p>
-            <p><a href="#">Dribble</a></p>
-            <p>.</p>
-            <p><a href="#">Github</a></p>
+            <div class="sub-menu">
+              <p><a href="#">Twitter</a></p>
+              <p>.</p>
+              <p><a href="#">Instagram</a></p>
+              <p>.</p>
+              <p><a href="#">Dribble</a></p>
+              <p>.</p>
+              <p><a href="#">Github</a></p>
+            </div>
           </div>
         </div>
+        <!-- =============== NAV BAR END ========================= -->
+
+        <!-- =============== HERO ========================= -->
+        <div id="Hero">
+          <h1>HERO</h1>
+        </div>
+        <!-- =============== HERO END ========================= -->
+
+        <!-- =============== 3D MODEL ========================= -->
+        <div id="Three-model">
+          <h1>Three Model</h1>
+        </div>
+        <!-- =============== 3D MODEL END ========================= -->
+
+        <!-- =============== PRODUCT SLIDER ========================= -->
+        <!-- This section is for the product slider, which showcases multiple products in a sliding format -->
+        <!-- PRODUCT SLIDER END -->
+
+        <!-- =============== FEATURES ========================= -->
+        <!-- This section highlights the features of the products or services offered -->
+        <!-- FEATURES END -->
+
+        <!-- =============== CATEGORY ========================= -->
+        <!-- This section displays different categories for easier navigation and exploration -->
+        <!-- CATEGORY END -->
+
+        <!-- =============== FEEDBACKS ========================= -->
+        <!-- This section is for customer feedbacks and testimonials -->
+        <!-- FEEDBACKS END -->
+
+        <!-- =============== CONTACT US ========================= -->
+        <!-- This section provides contact information and a form for users to get in touch -->
+        <!-- CONTACT US END -->
+
+        <!-- =============== FOOTER ========================= -->
+        <!-- This section is the footer, typically containing additional navigation links, copyright information, and social media links -->
+        <!-- FOOTER END -->
       </div>
-      <!-- =============== NAV BAR END ========================= -->
-
-      <!-- =============== HERO ========================= -->
-      <div id="Hero">
-        <h1>HERO</h1>
-      </div>
-      <!-- =============== HERO END ========================= -->
-
-      <!-- =============== 3D MODEL ========================= -->
-      <div id="Three-model">
-        <h1>Three Model</h1>
-      </div>
-      <!-- =============== 3D MODEL END ========================= -->
-
-      <!-- =============== PRODUCT SLIDER ========================= -->
-      <!-- This section is for the product slider, which showcases multiple products in a sliding format -->
-      <!-- PRODUCT SLIDER END -->
-
-      <!-- =============== FEATURES ========================= -->
-      <!-- This section highlights the features of the products or services offered -->
-      <!-- FEATURES END -->
-
-      <!-- =============== CATEGORY ========================= -->
-      <!-- This section displays different categories for easier navigation and exploration -->
-      <!-- CATEGORY END -->
-
-      <!-- =============== FEEDBACKS ========================= -->
-      <!-- This section is for customer feedbacks and testimonials -->
-      <!-- FEEDBACKS END -->
-
-      <!-- =============== CONTACT US ========================= -->
-      <!-- This section provides contact information and a form for users to get in touch -->
-      <!-- CONTACT US END -->
-
-      <!-- =============== FOOTER ========================= -->
-      <!-- This section is the footer, typically containing additional navigation links, copyright information, and social media links -->
-      <!-- FOOTER END -->
     </div>
-  </div>
 
-  <!-- =============== SCRIPTS ========================= -->
-  <!-- BARBA JS -->
-  <script src="https://unpkg.com/@barba/core"></script>
+    <!-- =============== SCRIPTS ========================= -->
+    <!-- BARBA JS -->
+    <script src="https://unpkg.com/@barba/core"></script>
 
-  <!-- Locomotive -->
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-  <!-- ScrollTrigger is needed for scroll effects -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Locomotive -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!-- ScrollTrigger is needed for scroll effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-  <!-- Three.js is needed for 3D effects -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <!-- Three.js is needed for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
 
-  <!-- ControlKit is needed for the debug panel -->
-  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <!-- ControlKit is needed for the debug panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
 
-  <!-- Css Rule Pluggin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js"
-    integrity="sha512-IxxYrSNXnt/RJlxNX40+7BQL88FLqvdpVpuV9AuvpNH/NFP0L8xA8WLxWTXx6PYExB5R/ktQisp6tIrnLn8xvw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Css Rule Pluggin -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js"
+      integrity="sha512-IxxYrSNXnt/RJlxNX40+7BQL88FLqvdpVpuV9AuvpNH/NFP0L8xA8WLxWTXx6PYExB5R/ktQisp6tIrnLn8xvw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- GSAP for animations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
-  <!-- Shery.js for additional functionalities -->
-  <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <!-- Shery.js for additional functionalities -->
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
 
-  <!-- Main JavaScript file -->
-  <script src="./Js/Barba.js"></script>
-  <script src="./Js/Locomotive.js"></script>
-  <script src="./Js/Nav.js"></script>
-  <script src="./main.js"></script>
-  <!-- SCRIPTS END -->
-</body>
-
+    <!-- Main JavaScript file -->
+    <script src="./Js/Barba.js"></script>
+    <script src="./Js/Locomotive.js"></script>
+    <script src="./Js/Nav.js"></script>
+    <script src="./main.js"></script>
+    <!-- SCRIPTS END -->
+  </body>
 </html>
