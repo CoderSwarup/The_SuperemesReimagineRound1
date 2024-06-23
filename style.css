@@ -13,13 +13,38 @@ body {
   background: #000;
   color: #fff;
 }
+/* Barba Js */
+
+.cover {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  transform: translateY(0);
+  z-index: 100;
+  background: transparent;
+}
+
+.cover span {
+  width: 100%;
+  height: 100%;
+  background: #df2b2f;
+}
+/* Barba Js ENd */
 
 #main {
   width: 100%;
   min-height: 100vh;
   position: relative;
 }
+#js-scroll {
+  position: relative;
+  width: 100%;
+}
 
+/* PRE LOADER */
 #preLoader {
   position: fixed;
   width: 100%;
@@ -87,13 +112,16 @@ body {
   height: 50px;
   filter: invert(100%);
 }
-
+/* PRE LOADER END */
 /* ********* HERO SECTION *********** */
 
 #Hero {
   width: 100%;
   min-height: 100vh;
   background: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ********* THREE MODEL SECTION *********** */

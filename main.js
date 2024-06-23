@@ -1,3 +1,8 @@
+const DefaultSetter = () => {
+  gsap.set("#nav nav .info", { y: -100 });
+  gsap.set("#nav nav .logo", { y: -100 });
+  gsap.set("#nav nav .toggle-btn", { y: -100 });
+};
 function PreLoader() {
   const PreLoaderConatiner = document.querySelector("#preLoader");
   const LoaderContent = document.querySelector(".l-loader");
@@ -13,13 +18,13 @@ function PreLoader() {
   tl.from(lines, {
     width: 0,
     stagger: 0.3,
-    duration: 2,
+    duration: 1,
   }).fromTo(
     textContentContainer,
-    { height: "0px", duration: 2, ease: "power4.out" },
+    { height: "0px", duration: 1, ease: "power4.out" },
     {
       height: "150px",
-      duration: 2,
+      duration: 1,
     }
   );
   const headings = [
@@ -36,38 +41,38 @@ function PreLoader() {
     const fadeLabel = `h${id}-fade`;
 
     // Animation for top and bottom elements of current heading
-    tl.to(`#l-t-${id}`, { y: `${startY}%`, duration: 1 }, label)
-      .to(`#l-b-${id}`, { y: `${startY}%`, duration: 1 }, label)
-      .to(`#l-t-${id}`, { y: `${endY}%`, duration: 1 }, fadeLabel)
-      .to(`#l-b-${id}`, { y: `${endY}%`, duration: 1 }, fadeLabel);
+    tl.to(`#l-t-${id}`, { y: `${startY}%`, duration: 0.5 }, label)
+      .to(`#l-b-${id}`, { y: `${startY}%`, duration: 0.5 }, label)
+      .to(`#l-t-${id}`, { y: `${endY}%`, duration: 0.5 }, fadeLabel)
+      .to(`#l-b-${id}`, { y: `${endY}%`, duration: 0.5 }, fadeLabel);
   });
 
-  tl.to(textContentContainer, {
-    height: "0px",
-    delay: 1,
-    duration: 2,
-    ease: "power4.out",
-  })
-    .to(lines, {
-      width: 0,
-      stagger: 0.3,
-      duration: 2,
-    })
-    .to(
-      LoaderContent,
-      {
-        y: "-100%",
-        duration: 2,
-        ease: "power4.out",
-      },
-      "a"
-    )
+  // tl.to(textContentContainer, {
+  //   height: "0px",
+  //   delay: 0.3,
+  //   duration: 1,
+  //   ease: "power4.out",
+  // })
+  //   .to(lines, {
+  //     width: 0,
+  //     stagger: 0.3,
+  //     duration: 1,
+  //   })
+  tl.to(
+    LoaderContent,
+    {
+      y: "-100%",
+      duration: 1,
+      ease: "power4.out",
+    },
+    "a"
+  )
     .to(
       bacgroundLoaderScreen,
       {
-        delay: 0.2,
+        delay: 0.1,
         y: "-100%",
-        duration: 2,
+        duration: 1,
         ease: "power4.out",
       },
       "a"
@@ -77,13 +82,17 @@ function PreLoader() {
       {
         delay: 0.3,
         y: "-100%",
-        duration: 2,
+        duration: 1,
         ease: "power4.out",
+        onComplete: () => {
+          NavbarAnimation();
+        },
       },
       "a"
     )
     .add(() => {
       locoScroll.init();
+      console.log(locoScroll);
     });
 }
 
@@ -91,7 +100,23 @@ window.onload = () => {
   PreLoader();
 };
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#js-scroll"),
-  smooth: true,
-});
+DefaultSetter();
+//Navbar Animation
+function NavbarAnimation() {
+  const tl = gsap.timeline();
+  tl.to("#nav nav .info", {
+    y: 0,
+    duration: 1,
+    ease: "elastic.out",
+  })
+    .to("#nav nav .logo", {
+      y: 0,
+      duration: 0.51,
+      ease: "elastic.out",
+    })
+    .to("#nav nav .toggle-btn", {
+      y: 0,
+      duration: 0.51,
+      ease: "elastic.out",
+    });
+}
