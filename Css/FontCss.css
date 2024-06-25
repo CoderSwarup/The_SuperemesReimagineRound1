@@ -2,3 +2,8 @@
   font-family: Canopee Regular;
   src: url("../Fonts/Canopee\ Regular.otf");
 }
+
+@font-face {
+  font-family: Metropolis-Black;
+  src: url("../Fonts/Metropolis-Black.otf");
+}

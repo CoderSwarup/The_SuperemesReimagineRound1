@@ -67,3 +67,25 @@ document.addEventListener("DOMContentLoaded", function () {
     isOpen = !isOpen;
   });
 });
+//Navbar Animation
+function NavbarAnimation() {
+  const tl = gsap.timeline();
+  gsap.to("#nav nav", {
+    y: 0,
+  });
+  // tl.to("#nav nav .info", {
+  //   y: 0,
+  //   duration: 1,
+  //   ease: "elastic.out",
+  // })
+  //   .to("#nav nav .logo", {
+  //     y: 0,
+  //     duration: 0.51,
+  //     ease: "elastic.out",
+  //   })
+  //   .to("#nav nav .toggle-btn", {
+  //     y: 0,
+  //     duration: 0.51,
+  //     ease: "elastic.out",
+  //   });
+}

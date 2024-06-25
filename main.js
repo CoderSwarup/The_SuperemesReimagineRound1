@@ -1,7 +1,8 @@
 const DefaultSetter = () => {
-  gsap.set("#nav nav .info", { y: -100 });
-  gsap.set("#nav nav .logo", { y: -100 });
-  gsap.set("#nav nav .toggle-btn", { y: -100 });
+  gsap.set("#nav nav", { y: -100 });
+  // gsap.set("#nav nav .info", { y: -100 });
+  // gsap.set("#nav nav .logo", { y: -100 });
+  // gsap.set("#nav nav .toggle-btn", { y: -100 });
 };
 
 function PreLoader() {
@@ -16,7 +17,7 @@ function PreLoader() {
   tl.to(
     "#preLoader .l-loader #l-h-1",
     {
-      delay: 0.3,
+      delay: 0.2,
       display: "block",
     },
     ".."
@@ -30,6 +31,7 @@ function PreLoader() {
       ".."
     )
     .to("#preLoader .l-loader #l-h-2", {
+      delay: 0.03,
       display: "block",
     })
     .to(
@@ -51,23 +53,29 @@ function PreLoader() {
     LoaderContent,
     {
       backgroundColor: "red",
+      duration: 0.2,
     },
     "c"
   );
   whiteheading.forEach((ele) => {
     tl.to(ele, {
-      display: "block",
+      display: "flex",
       duration: 0.2,
     });
   });
 
-  whiteheading.forEach((ele, i) => {
-    console.log(whiteheading.length - i - 1);
-    tl.to(whiteheading[whiteheading.length - i - 1], {
-      display: "none",
-      duration: 0.2,
-    });
+  tl.to(whiteheading, {
+    display: "none",
+    duration: 0.2,
   });
+
+  // whiteheading.forEach((ele, i) => {
+  //   console.log(whiteheading.length - i - 1);
+  //   tl.to(whiteheading[whiteheading.length - i - 1], {
+  //     display: "none",
+  //     duration: 0.2,
+  //   });
+  // });
 
   tl.to(LoaderContent, {
     backgroundColor: "#000",
@@ -95,7 +103,7 @@ function PreLoader() {
     .to(
       bacgroundLoaderScreen,
       {
-        delay: 0.2,
+        delay: 0.4,
         y: "-100%",
         duration: 1,
         ease: "power4.out",
@@ -125,23 +133,3 @@ window.onload = () => {
 };
 
 DefaultSetter();
-
-//Navbar Animation
-function NavbarAnimation() {
-  const tl = gsap.timeline();
-  tl.to("#nav nav .info", {
-    y: 0,
-    duration: 1,
-    ease: "elastic.out",
-  })
-    .to("#nav nav .logo", {
-      y: 0,
-      duration: 0.51,
-      ease: "elastic.out",
-    })
-    .to("#nav nav .toggle-btn", {
-      y: 0,
-      duration: 0.51,
-      ease: "elastic.out",
-    });
-}

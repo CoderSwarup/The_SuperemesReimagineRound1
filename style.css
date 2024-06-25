@@ -44,16 +44,111 @@ body {
   position: relative;
   width: 100%;
 }
+/* ********* Video Scrolling  *********** */
+#scrolling-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+#scrolling-container video {
+  width: 100%;
+  flex-shrink: 0;
+  transition: all 0.5 ease;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+#scrolling-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 4;
+}
+
+#scrolling-container button {
+  position: absolute;
+  display: inline-flex;
+  width: 55px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+#scrolling-container button {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.25s;
+  font-family: "Montserrat", sans-serif;
+}
+#scrolling-container #prevBtn::before,
+#scrolling-container #prevBtn::after {
+  position: absolute;
+  content: "<";
+  height: 55px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid rgb(0, 0, 0);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+#scrolling-container #nextBtn::before,
+#scrolling-container #nextBtn::after {
+  position: absolute;
+  content: ">";
+  height: 55px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid rgb(0, 0, 0);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#scrolling-container button:before {
+  color: #ffffff;
+  background: #0000004a;
+  transform: rotateY(0deg) translateZ(25px);
+}
+#scrolling-container button:after {
+  color: #ffffff;
+  transform: rotateX(90deg) translateZ(25px);
+}
+#scrolling-container button:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+/* ********* Video Scrolling  *********** */
 
 /* ********* HERO SECTION *********** */
 
 #Hero {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   background: #2c2c2c;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 /* ********* THREE MODEL SECTION *********** */

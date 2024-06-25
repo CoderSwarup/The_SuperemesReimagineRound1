@@ -37,12 +37,18 @@
 }
 
 #preLoader .l-loader h1 {
-  font-size: 25vh;
+  font-size: 22vh;
   font-weight: 800;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-spacing: none;
+  white-space: none;
   font-family: Metropolis-Black;
 }
-
+.font-A {
+  width: 120px;
+}
 #preLoader .l-loader h1.l-h-red {
   color: red;
   font-size: 36vh;
@@ -74,7 +80,7 @@
   right: 3%;
   z-index: -1;
   transform: translateY(100%);
-  width: 400px;
+  width: 600px;
   /* transform: translate(-50%, -50%); */
 }
 /* OLD */

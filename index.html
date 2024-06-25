@@ -25,8 +25,12 @@
         <h1 id="l-h-1" class="l-h-red">HOLD</h1>
         <h1 id="l-h-2" class="l-h-red">THIGHT ...</h1>
         <h1 id="l-h-3" class="l-h-white">YOUR</h1>
-        <h1 id="l-h-4" class="l-h-white">ULTIMATE</h1>
-        <h1 id="l-h-5" class="l-h-white">AUDIO</h1>
+        <h1 id="l-h-4" class="l-h-white">
+          ULTIM<img class="font-A" src="./Fonts/A .svg" alt="" />TE
+        </h1>
+        <h1 id="l-h-5" class="l-h-white">
+          <img class="font-A" src="./Fonts/A .svg" alt="" />UDIO
+        </h1>
         <h1 id="l-h-6" class="l-h-white">JOURNEY</h1>
         <h1 id="l-h-7" class="l-h-red">BEGINS</h1>
         <img id="l-img" src="./Images/Aman Gupta.png" alt="founder" />
@@ -34,60 +38,71 @@
       <div class="l-red-backgrond"></div>
     </div>
     <!-- =============== PRE_LOADER END ========================= -->
+    <div id="nav">
+      <nav>
+        <div class="info">
+          <p>Boat LifeStyle</p>
+        </div>
 
+        <div class="logo">
+          <a href="#">
+            <img src="./Images/SVG/Logo/boat logo white,red.svg" alt=""
+          /></a>
+        </div>
+
+        <div class="toggle-btn">
+          <button
+            class="burger"
+            onclick="this.classList.toggle('active')"
+          ></button>
+        </div>
+      </nav>
+
+      <div class="overlay">
+        <div class="line"></div>
+        <div class="overlay-menu">
+          <div class="menu-items">
+            <p id="active"><a href="#">Home</a></p>
+          </div>
+          <div class="menu-items">
+            <p><a href="#">Latest Products</a></p>
+          </div>
+          <div class="menu-items">
+            <p><a href="#">Our Features</a></p>
+          </div>
+          <div class="menu-items">
+            <p><a href="#">Categories</a></p>
+          </div>
+          <div class="menu-items">
+            <p><a href="/contactus.html">Contact Us</a></p>
+          </div>
+        </div>
+
+        <div class="sub-menu">
+          <p><a href="#">Twitter</a></p>
+          <p>.</p>
+          <p><a href="#">Instagram</a></p>
+          <p>.</p>
+          <p><a href="#">Dribble</a></p>
+          <p>.</p>
+          <p><a href="#">Github</a></p>
+        </div>
+      </div>
+    </div>
     <div id="main">
       <div id="js-scroll">
         <!-- =============== NAV BAR ========================= -->
-        <div id="nav">
-          <nav>
-            <div class="info">
-              <p>Boat LifeStyle</p>
-            </div>
 
-            <div class="logo">
-              <a href="#"> <img src="./Images/SVG/Logo/Logo.png" alt="" /></a>
-            </div>
-
-            <div class="toggle-btn">
-              <button
-                class="burger"
-                onclick="this.classList.toggle('active')"
-              ></button>
-            </div>
-          </nav>
-
-          <div class="overlay">
-            <div class="line"></div>
-            <div class="overlay-menu">
-              <div class="menu-items">
-                <p id="active"><a href="#">Home</a></p>
-              </div>
-              <div class="menu-items">
-                <p><a href="#">Latest Products</a></p>
-              </div>
-              <div class="menu-items">
-                <p><a href="#">Our Features</a></p>
-              </div>
-              <div class="menu-items">
-                <p><a href="#">Categories</a></p>
-              </div>
-              <div class="menu-items">
-                <p><a href="/contactus.html">Contact Us</a></p>
-              </div>
-            </div>
-
-            <div class="sub-menu">
-              <p><a href="#">Twitter</a></p>
-              <p>.</p>
-              <p><a href="#">Instagram</a></p>
-              <p>.</p>
-              <p><a href="#">Dribble</a></p>
-              <p>.</p>
-              <p><a href="#">Github</a></p>
-            </div>
-          </div>
-        </div>
         <!-- =============== NAV BAR END ========================= -->
+        <!-- =============== SCROLLING VIDEO CONTAINER========================= -->
+        <div id="scrolling-container">
+          <video src="./Video/vd2.mp4" autoplay loop muted></video>
+          <video src="./Video/vd1.mp4" autoplay loop muted></video>
+          <video src="./Video/vd3.mp4" autoplay loop muted></video>
+          <button id="prevBtn"></button>
+          <button id="nextBtn"></button>
+        </div>
+        <!-- =============== SCROLLING VIDEO CONTAINER END========================= -->
 
         <!-- =============== HERO ========================= -->
         <div id="Hero">
@@ -163,6 +178,8 @@
     <script src="./Js/Barba.js"></script>
     <script src="./Js/Locomotive.js"></script>
     <script src="./Js/Nav.js"></script>
+    <script src="./Js/Video_Scrolling.js"></script>
+
     <script src="./main.js"></script>
     <!-- SCRIPTS END -->
   </body>
