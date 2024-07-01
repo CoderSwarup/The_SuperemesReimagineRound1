@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BOAT</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./Css/Nav.css" />
+    <link rel="stylesheet" href="./Css/ContactUs.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
@@ -21,7 +20,83 @@
 
     <div id="main">
       <div id="js-scroll">
-        <h1><a href="/index.html">Home</a></h1>
+        <div id="Scroll-container">
+          <section class="sticky">
+            <nav>
+              <div class="logo">
+                <a
+                  href="/index.html"
+                  target="_parent"
+                  onclick="window.location.href='/'"
+                  ><img src="./Images/SVG/Logo/boat logo white,red.svg" alt=""
+                /></a>
+              </div>
+
+              <div class="links">
+                <a href="#webContent">UPCOMING EVENTS</a>
+                <a onclick="window.location.href='/'" href="/">Home</a>
+              </div>
+            </nav>
+
+            <div class="header">
+              <div><a href="" class="text">Instagram</a></div>
+              <div>
+                <div><a href="" class="text">Facebook</a></div>
+                <div><a href="" class="text">Linkedin</a></div>
+              </div>
+              <div><a href="" class="text">Email</a></div>
+            </div>
+
+            <div class="tracker">
+              <div class="emoji">
+                <div class="emoji-face">
+                  <div class="eyes">
+                    <img src="./Images/Contact_us/eye.svg" alt="" />
+                    <img src="./Images/Contact_us/eye.svg" alt="" />
+                  </div>
+                  <div class="mouth-wrapper">
+                    <div class="mouth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <footer>
+              <div class="mail">
+                <a href="">hello@boat-lifetyle.com</a>
+              </div>
+              <div class="location">
+                <a href="">Delhi, IN</a>
+              </div>
+            </footer>
+          </section>
+          <section class="web-content" id="webContent">
+            <div class="section-header">
+              <h1>Events</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus iusto maiores, assumenda obcaecati et deserunt tempora
+                error itaque harum, aliquid quisquam voluptate asperiores natus?
+                Possimus laudantium expedita sit non at.
+              </p>
+            </div>
+
+            <div class="section-images">
+              <div class="row">
+                <img src="path/to/p1.webp" alt="" />
+                <img src="path/to/p2.webp" alt="" />
+              </div>
+              <div class="row">
+                <img src="path/to/p3.webp" alt="" />
+                <img src="path/to/p4.webp" alt="" />
+              </div>
+              <div class="row">
+                <img src="path/to/p5.webp" alt="" />
+                <img src="path/to/p1.webp" alt="" />
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
 
@@ -31,36 +106,23 @@
 
     <!-- Locomotive -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <!-- ScrollTrigger is needed for scroll effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-    <!-- Three.js is needed for 3D effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
-
-    <!-- ControlKit is needed for the debug panel -->
-    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-
-    <!-- Css Rule Pluggin -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CSSRulePlugin.min.js"
-      integrity="sha512-IxxYrSNXnt/RJlxNX40+7BQL88FLqvdpVpuV9AuvpNH/NFP0L8xA8WLxWTXx6PYExB5R/ktQisp6tIrnLn8xvw=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
 
-    <!-- GSAP for animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-
-    <!-- Shery.js for additional functionalities -->
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/sheryjs/dist/Shery.js"
-    ></script>
-
     <!-- Main JavaScript file -->
     <script src="./Js/Barba.js"></script>
-    <script src="./Js/Nav.js"></script>
-    <script src="./main.js"></script>
+    <script src="./Js/Contact-Us.js"></script>
     <!-- SCRIPTS END -->
   </body>
 </html>

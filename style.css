@@ -1,5 +1,9 @@
 @import url("./Css/FontCss.css");
 @import url("./Css/Preloader.css");
+@import url("./Css/Category.css");
+@import url("./Css/Features.css");
+@import url("./Css/BestSellers.css");
+@import url("./Css/Footer.css");
 
 * {
   padding: 0;
@@ -13,6 +17,7 @@ body {
   min-height: 100vh;
   background: #000;
   color: #fff;
+  font-family: Metropolis-Black;
 }
 /* Barba Js */
 
@@ -138,18 +143,6 @@ body {
 }
 
 /* ********* Video Scrolling  *********** */
-
-/* ********* HERO SECTION *********** */
-
-#Hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background: #2c2c2c;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
 
 /* ********* THREE MODEL SECTION *********** */
 

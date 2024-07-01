@@ -13,7 +13,14 @@ function PreLoader() {
     "#preLoader .l-loader h1.l-h-white"
   );
   const tl = gsap.timeline({ paused: false });
-
+  //  .to(
+  //       "#l-img",
+  //       {
+  //         y: "0",
+  //         opacity: 1,
+  //       },
+  //       ".."
+  //     )
   tl.to(
     "#preLoader .l-loader #l-h-1",
     {
@@ -22,14 +29,7 @@ function PreLoader() {
     },
     ".."
   )
-    .to(
-      "#l-img",
-      {
-        y: "0",
-        opacity: 1,
-      },
-      ".."
-    )
+
     .to("#preLoader .l-loader #l-h-2", {
       delay: 0.03,
       display: "block",
@@ -82,14 +82,16 @@ function PreLoader() {
   });
   tl.to("#preLoader .l-loader #l-h-7", {
     display: "block",
-  }).to(
-    "#l-img",
-    {
-      y: "100%",
-      opacity: 0,
-    },
-    "a"
-  );
+  });
+
+  // .to(
+  //   "#l-img",
+  //   {
+  //     y: "100%",
+  //     opacity: 0,
+  //   },
+  //   "a"
+  // );
   tl.to(
     LoaderContent,
     {
@@ -133,3 +135,19 @@ window.onload = () => {
 };
 
 DefaultSetter();
+
+// Best Sellor Animaton
+const BestSellervideos = document.querySelectorAll(".bsVideo");
+console.log(BestSellervideos);
+// Add event listeners for hover
+BestSellervideos.forEach((video) => {
+  video.parentElement.addEventListener("mouseenter", () => {
+    video.play();
+  });
+
+  video.parentElement.addEventListener("mouseleave", () => {
+    video.pause();
+  });
+});
+
+// Footer
