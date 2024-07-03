@@ -4,6 +4,7 @@
   background: #363636;
   font-family: Metropolis-Black;
   color: #ffffff;
+  display: none;
 }
 
 #Footer h1:hover,

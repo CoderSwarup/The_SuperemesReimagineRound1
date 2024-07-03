@@ -150,4 +150,44 @@ BestSellervideos.forEach((video) => {
   });
 });
 
-// Footer
+const InPressAnimation = () => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      scroller: "#js-scroll",
+      trigger: "#Press",
+      start: "top top+=100",
+      end: "bottom+=2000 top+=800",
+      scrub: true,
+      // markers: true,
+      pin: true,
+    },
+    defaults: { ease: "none" },
+  });
+  tl.fromTo("#Press .afterImage", { xPercent: 100, x: 0 }, { xPercent: 0 }, 0)
+    .fromTo(
+      "#Press .afterImage .overlay",
+      { xPercent: -100, x: 0 },
+      { xPercent: 0 },
+      0
+    )
+    .fromTo("#Press .thirdImage", { xPercent: 100, x: 0 }, { xPercent: 0 }, 1)
+    .fromTo(
+      "#Press .thirdImage .overlay",
+      { xPercent: -100, x: 0 },
+      { xPercent: 0 },
+      1
+    )
+    .to("#Footer", {
+      display: "block",
+    });
+};
+
+InPressAnimation();
+
+window.addEventListener("mousemove", (e) => {
+  gsap.to("#cursor", {
+    x: e.x,
+    y: e.y,
+    ease: "back.out",
+  });
+});

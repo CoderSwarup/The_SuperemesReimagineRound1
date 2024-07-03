@@ -4,6 +4,9 @@
 @import url("./Css/Features.css");
 @import url("./Css/BestSellers.css");
 @import url("./Css/Footer.css");
+@import url("./Css/Product.css");
+@import url("./Css/Press.css");
+@import url("./Css/Blog.css ");
 
 * {
   padding: 0;
@@ -39,6 +42,20 @@ body {
   background: #df2b2f;
 }
 /* Barba Js ENd */
+
+#cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  background: #fff;
+  z-index: 99;
+  font-size: 3px;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #main {
   width: 100%;

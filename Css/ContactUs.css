@@ -272,12 +272,16 @@ nav {
 
 .row {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2em;
   margin: 2em;
 }
 
 .row img {
+  width: 50%;
   height: 600px;
+  object-fit: cover;
 }
 
 @keyframes rotation {
